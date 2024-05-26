@@ -1,0 +1,8 @@
+# All you need to run!
+route53_zone_id = ""
+
+vault_fqdn = ""
+
+key_name = ""
+
+letsencrypt_reg_email = ""
