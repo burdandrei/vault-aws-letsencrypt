@@ -28,7 +28,7 @@ resource "aws_launch_template" "vault" {
     resource_type = "instance"
 
     tags = {
-      Name = random_pet.env.id
+      Name = "{random_pet.env.id}-vault"
     }
   }
 

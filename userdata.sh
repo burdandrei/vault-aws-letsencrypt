@@ -6,15 +6,6 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - ;\
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" ;\
 sudo apt-get update && sudo apt-get install vault unzip -y
 
-
-
-
-# Bring some plugins
-mkdir -p /opt/vault/plugins
-wget -P /tmp/ https://releases.hashicorp.com/vault-plugin-secrets-gcp/0.19.0/vault-plugin-secrets-gcp_0.19.0_linux_amd64.zip
-unzip /tmp/vault-plugin-secrets-gcp_0.19.0_linux_amd64.zip -d /opt/vault/plugins
-chown -Rv vault:vault /opt/vault/plugins
-
 #Configure Vault server
 cat << EOVCF >/etc/vault.d/vault.hcl
 ui = true

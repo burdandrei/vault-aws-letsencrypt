@@ -30,14 +30,6 @@ resource "aws_vpc_security_group_ingress_rule" "allow_vtls_ipv4" {
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 8200
   ip_protocol       = "tcp"
-  to_port           = 8200
-}
-
-resource "aws_vpc_security_group_ingress_rule" "allow_vcluster_ipv4" {
-  security_group_id = aws_security_group.allow_tls.id
-  cidr_ipv4         = module.vpc.vpc_cidr_block
-  from_port         = 8201
-  ip_protocol       = "tcp"
   to_port           = 8201
 }
 
