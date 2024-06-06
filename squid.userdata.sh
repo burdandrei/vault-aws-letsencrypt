@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script is meant to be run in the User Data of the Vault Server while it's booting.
+# This script is meant to be run in the User Data of the Squid Server while it's booting for the first time.
 
 sudo apt-get update && sudo apt-get install squid -y
 
@@ -11,4 +11,4 @@ http_access allow all
 EOSCF
 
 systemctl enable squid
-systemctl start squid
+systemctl restart squid
