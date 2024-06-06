@@ -1,6 +1,6 @@
-# Welcome to secret that will help you deploy airgapped Vault and Squid Proxy to enable per-plugin access
+# Welcome to the secret branch that will help you deploy airgapped Vault Clusterand Squid Proxy to enable per-plugin access
 
-This is a demo Terroform code **NOT** intended for production use.
+This is a demo Terraform code **NOT** intended for production use.
 
 It showcases the deployment of Vault cluster on AWS using:
 
@@ -15,7 +15,7 @@ After Vault is initialized change the nodes' Security Group to be *_airgapped, i
 
 ## Configure plugin
 
-During the provisioning gcp secrets plugin is downloaded to Vault nodes.
+During the provisioning, gcp secrets plugin is downloaded to Vault nodes.
 Run the following to enable it with the proxy.
 
 * `PROXY_IP` is a private IP of the SQUID instance, also can be seen in terraform output.
@@ -61,4 +61,4 @@ EOF
 vault read gcp-proxy/roleset/my-token-roleset/token
 ```
 
-### Thank @GuyBarros for making me do it
+### Thank [@GuyBarros](https://github.com/GuyBarros/) for making me do it
